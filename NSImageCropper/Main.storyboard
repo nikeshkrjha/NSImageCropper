@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L56-j5-0ak">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Cropper View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ImageCropperViewController" id="BYZ-38-t0r" customClass="ImageCropperViewController" customModule="NSImageCropper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57h-fK-m6a">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="fai-wF-XXp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fai-wF-XXp" firstAttribute="top" secondItem="57h-fK-m6a" secondAttribute="top" id="2ZY-5d-ph7"/>
+                                    <constraint firstItem="fai-wF-XXp" firstAttribute="centerY" secondItem="57h-fK-m6a" secondAttribute="centerY" constant="-66.5" id="CFW-t0-8l4"/>
+                                    <constraint firstAttribute="bottom" secondItem="fai-wF-XXp" secondAttribute="bottom" constant="133" id="KTk-ac-e0y"/>
+                                    <constraint firstAttribute="trailing" secondItem="fai-wF-XXp" secondAttribute="trailing" id="T8Q-qS-aQo"/>
+                                    <constraint firstItem="fai-wF-XXp" firstAttribute="centerX" secondItem="57h-fK-m6a" secondAttribute="centerX" id="Yug-gg-TIC"/>
+                                    <constraint firstItem="fai-wF-XXp" firstAttribute="leading" secondItem="57h-fK-m6a" secondAttribute="leading" id="min-Ry-dQg"/>
+                                </constraints>
+                            </scrollView>
+                            <view opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzl-kQ-fMv" customClass="CropAreaView" customModule="NSImageCropper" customModuleProvider="target">
+                                <rect key="frame" x="25" y="127" width="325" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="211" id="Oqe-f3-lDn"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvx-1A-Zy2">
+                                <rect key="frame" x="132" y="617" width="93" height="30"/>
+                                <state key="normal" title="CROP"/>
+                                <connections>
+                                    <action selector="crop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZg-18-aIP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tvx-1A-Zy2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-9" id="1l6-k9-kkO"/>
+                            <constraint firstItem="57h-fK-m6a" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2qb-uk-zNX"/>
+                            <constraint firstItem="Nzl-kQ-fMv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Myz-gf-qCK"/>
+                            <constraint firstItem="Nzl-kQ-fMv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="127" id="SJg-7L-czO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tvx-1A-Zy2" secondAttribute="bottom" constant="20" id="YlA-Eq-eXV"/>
+                            <constraint firstAttribute="trailing" secondItem="57h-fK-m6a" secondAttribute="trailing" id="ZwG-mQ-beX"/>
+                            <constraint firstItem="57h-fK-m6a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ddC-kh-skA"/>
+                            <constraint firstAttribute="trailing" secondItem="Nzl-kQ-fMv" secondAttribute="trailing" constant="25" id="kIV-5x-bs4"/>
+                            <constraint firstItem="57h-fK-m6a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="obG-3z-19d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cropAreaView" destination="Nzl-kQ-fMv" id="fC3-eW-Dfb"/>
+                        <outlet property="imageView" destination="fai-wF-XXp" id="YBC-1g-EJF"/>
+                        <outlet property="scrollView" destination="57h-fK-m6a" id="RkG-yY-GVq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="130"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0g9-de-Ohm">
+            <objects>
+                <viewController id="rYq-KI-n7N" customClass="ViewController" customModule="NSImageCropper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VlI-Rt-6SS"/>
+                        <viewControllerLayoutGuide type="bottom" id="37q-3x-6s2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zLU-TM-SPT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itz-9H-YVc">
+                                <rect key="frame" x="120" y="454" width="135" height="40"/>
+                                <color key="backgroundColor" red="0.2929516137" green="0.53601211309999997" blue="0.60928344729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="S3E-5a-9ex"/>
+                                    <constraint firstAttribute="height" constant="40" id="rck-ZC-tHy"/>
+                                </constraints>
+                                <state key="normal" title="select image">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageToCrop:" destination="rYq-KI-n7N" eventType="touchUpInside" id="Yar-Sq-hM7"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="baX-oK-O5l">
+                                <rect key="frame" x="25" y="25" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="JaK-I8-ocC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="baX-oK-O5l" firstAttribute="top" secondItem="VlI-Rt-6SS" secondAttribute="bottom" constant="25" id="1D1-Fn-BVh"/>
+                            <constraint firstItem="baX-oK-O5l" firstAttribute="leading" secondItem="zLU-TM-SPT" secondAttribute="leading" constant="25" id="Apl-em-aQx"/>
+                            <constraint firstItem="itz-9H-YVc" firstAttribute="centerX" secondItem="zLU-TM-SPT" secondAttribute="centerX" id="hDn-ku-UuA"/>
+                            <constraint firstAttribute="trailing" secondItem="baX-oK-O5l" secondAttribute="trailing" constant="25" id="mJl-8M-OhX"/>
+                            <constraint firstItem="37q-3x-6s2" firstAttribute="top" secondItem="itz-9H-YVc" secondAttribute="bottom" constant="109" id="ry3-Sr-p8M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wIg-Kl-wVA"/>
+                    <connections>
+                        <outlet property="displayImgView" destination="baX-oK-O5l" id="b6P-9A-uzx"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="OyR-pH-ndB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klV-zj-pv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="APB-C6-Rai">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L56-j5-0ak" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="51b-ee-r9m">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2929516137" green="0.53601211309999997" blue="0.60928344729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.2929516137" green="0.53601211309999997" blue="0.60928344729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rYq-KI-n7N" kind="relationship" relationship="rootViewController" id="nRj-sP-Cpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OH4-S4-Lwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img" width="2560" height="1600"/>
+    </resources>
+</document>
