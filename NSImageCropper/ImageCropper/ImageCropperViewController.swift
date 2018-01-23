@@ -21,7 +21,7 @@ class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
         didSet{
             scrollView.delegate = self
             scrollView.minimumZoomScale = 1.0
-            scrollView.maximumZoomScale = 10.0
+            scrollView.maximumZoomScale = 3.0
         }
     }
     
